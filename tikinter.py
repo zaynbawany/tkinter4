@@ -1,0 +1,16 @@
+from tkinter import*
+root=Tk()
+root.geometry("600x500")
+root.title("main")
+def toplevel():
+    top=Toplevel()
+    top.geometry("200x200")
+    top.title("toplevel")
+    lbl=Label(top,text="this is a toplevel window")
+    lbl.pack()
+    top.mainloop()
+lbl2=Label(root,text="this is a root window")
+btn=Button(root,text="press this button to open another window",command=toplevel)
+lbl2.pack()
+btn.pack()
+root.mainloop()
